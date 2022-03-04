@@ -1,0 +1,234 @@
+
+
+/* Reset */
+:root {
+    --background-color: #0D0D0D;
+    font-family: 'Roboto', sans-serif;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #112 url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm218batch4-aum-07_1_1.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=fa54b60dea7ea75803087c8e1417d1ea)  center no-repeat;
+    background-size:cover;
+  
+    min-height: 100vh;
+    color: #fff;
+    
+}
+
+h1 {
+    font-size: 2.2rem;
+
+}
+/* Header */
+
+header {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: space-around;
+    min-height: 8vh;
+    color: #fff;
+}
+
+.left-side, .right-side {
+    display: flex;
+    align-items: center;
+}
+
+.logo img { 
+    max-height: 1.8rem;
+    margin-right: .7rem;
+}
+
+.right-side button {
+    padding: 0 1.2rem;
+    text-transform: capitalize ;
+}
+
+.right-side > :nth-child(2n + 2) {
+    margin-right: .5rem;
+}
+
+.right-side > :nth-child(1) {
+    margin-right: .2rem;
+}
+
+.right-side select {
+    min-width: 8vw;
+}
+
+/* ********** */
+
+/* Main */
+.main {
+    position: relative;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 502px;
+}
+
+.campo {
+    
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    height: 50px;
+    width: 50px;
+    border: 1px solid rgb(215, 215, 215);
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #13DCF2,
+            0 0 0.8rem #13DCF2,
+            0 0 2.8rem #13DCF2,
+            inset 0 0 1.3rem #13DCF2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.selected {
+    background-color: #5cbf41c8;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #5CBF41,
+            0 0 0.8rem #5CBF41,
+            0 0 2.8rem #5CBF41,
+            inset 0 0 1.3rem #5CBF41;
+
+}
+
+.hidden {
+    color: rgba(255, 255, 255, 0);
+}
+
+.show {
+    color: white;
+}
+
+.bomb {
+    background-image: url(//img/bomb.jpeg) center no-repeat;
+    background-size: contain;
+
+}
+
+.selected-bomb {
+    background-color: #D90479;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #D90479,
+            0 0 0.8rem #D90479,
+            0 0 2.8rem #D90479,
+            inset 0 0 1.3rem #D90479;
+
+}
+
+.medium {
+    width: calc(50px * 9 + 2px) ;
+}
+.hard {
+    width: calc(50px * 7 + 2px);
+}
+
+  
+.neon {
+    font-family: 'Vibur', cursive;
+    color: #fee;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #13DCF2, 0 0 0.5em #13DCF2, 0 0 0.1em #13DCF2, 0 10px 3px #000;
+
+}
+
+.neon-red {
+    font-family: 'Vibur', cursive;
+    color: #fee;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #D90404, 0 0 0.5em #D90404, 0 0 0.1em #D90404, 0 10px 3px #000;
+
+}
+
+.discription {
+    font-size: 2.2rem;
+    text-align: center;
+}
+.discription .text-effect span{
+    animation: blink linear infinite 2s;
+}
+.discription .text-effect span:nth-of-type(2){
+    animation: blink linear infinite 3s;
+}
+
+.discription .text-effect span:nth-of-type(3){
+    animation: blink linear infinite 4s;
+}
+  @keyframes blink {
+    78% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    79%{
+       color: #333;
+    }
+    80% {
+      
+      text-shadow: none;
+    }
+    81% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    82% {
+      color: #333;
+      text-shadow: none;
+    }
+    83% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    92% {
+      color: #333;
+      text-shadow: none;
+    }
+    92.5% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+  }
+
+
+  /* GAME OVER WINDOW */
+
+  .finish {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        height: 250px;
+        background-color: rgba(0, 0, 0, 0.252);
+        
+        align-items: center;
+        justify-content: center;
+        display: none;
+
+  }
+
+  .display-box {
+        display: flex;
+  }
+
+  .display-non {
+      display: none;
+  }

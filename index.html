@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo Minato</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vibur&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="left-side">
+            <div class="logo">
+                <img src="img/Logo.png" alt="">
+            </div>
+            <h1 class="neon">Campo Minato Blast</h1>
+        </div>
+        <div class="right-side">
+            <label for="level">Difficoltà: </label>
+
+            <select id="level">
+                <option value="easy" selected>Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+            <button id="play">play</button>
+        </div>
+        
+        
+    </header>
+
+    <main>
+
+        <div class="container">
+            <div class="content-holder">
+                <div class="campo">
+                    <div class="discription neon">
+                        <div class="text-effect">
+                          <span>  Seleziona</span> una <span>Difficoltà</span>  per <span> inziare</span> la partita.
+                        </div>
+                    </div>
+                </div>
+                <div class="finish">
+                    <div class="discription neon-red">
+                        <div class="text-effect">
+                          <span> GAME OVER! seleziona</span> una <span>Difficoltà</span>  per <span> inziare</span> nuova partita.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    
+    <script src="scripts/script.js"></script>
+</body>
+</html>
