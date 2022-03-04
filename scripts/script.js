@@ -44,13 +44,16 @@ function play() {
     bombSpreader();
     console.log(boxNums);
    
+    let xCounter = 0;
     for(let i = min; i <= max; i++){
-        
+        console.log(xCounter);
         if (boxNums[i] == 'BOMB') {
-            divBomb();
+            xCounter += 1;
+            divBomb(xCounter);
 
         } else {
-            divBox();
+            xCounter += 1;
+            divBox(xCounter);
         }
        
     }
@@ -143,21 +146,64 @@ function play() {
         } 
     }
     
-    function divBox() {
+    function divBox(i) {
         let box = document.createElement("div");
-        let randomNumMax3 = randomNum(0, 4);
+        // let randomNumMax3 = randomNum(0, 4);
+        // console.log(i);
 
         // GAME LOGIC
-        // +1, -1 ,-6 -7 -8, 6 ,7 ,8 
-        boxNums
+        // +1, -1 ,-6 -7 -8, 6 ,7 ,8
+        let numCounter = 0;
+        // for (i;   i < boxNums.length; i++ ) {
+            let x1 = i - 1;
+            let x2 = i - 6;
+            let x3 = i - 7;
+            let x4 = i - 8;
+            let x5 = i + 1;
+            let x6 = i + 6;
+            let x7 = i + 7;
+            let x8 = i + 8;
+           if (boxNums[x1] == "BOMB"  ) {
+               numCounter++;
+           }    
+           
+           if (boxNums[x2] == "BOMB" ) {
+            numCounter++;
+           }
+           
+           if (boxNums[x3] == "BOMB" ) {
+            numCounter++;
+           }
+           
+           if (boxNums[x4] == "BOMB" ) {
+            numCounter++;
+           }
+           
+           if (boxNums[x5] == "BOMB" ) {
+            numCounter++;
+           }
+           
+           if (boxNums[x6] == "BOMB" ) {
+            numCounter++;
+           }
+           
+           if (boxNums[x7] == "BOMB" ) {
+            numCounter++;
+           }
 
-        box.innerHTML = randomNumMax3;
-        box.classList.add("box", "hidden");
+           if (boxNums[x8] == "BOMB" ) {
+            numCounter++;
+           }
+        //    console.log(numCounter);
+        // }
+
+        box.innerHTML = `${numCounter}`;
+        box.classList.add("box");
         box.addEventListener("click", clickedBox);
         bombArea.append(box);
     }
     
-    function divBomb() {
+    function divBomb(i) {
         
         
         let box = document.createElement("div");
