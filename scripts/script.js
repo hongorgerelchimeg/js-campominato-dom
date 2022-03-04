@@ -198,7 +198,7 @@ function play() {
         // }
 
         box.innerHTML = `${numCounter}`;
-        box.classList.add("box");
+        box.classList.add("box", "hidden"); // for testing purpose removed ->  , "hidden"
         box.addEventListener("click", clickedBox);
         bombArea.append(box);
     }
@@ -220,3 +220,6 @@ function play() {
 
 
 
+// TO DO 
+// FIX BUG MULTIPLE CLICK ON 1 CELL!
+// @GAME LOGIC -Square Corner elements count wrong!!
